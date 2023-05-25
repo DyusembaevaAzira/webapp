@@ -1,0 +1,11 @@
+package ru.altmanea.webapp.rest
+
+import io.ktor.server.routing.*
+import ru.altmanea.webapp.config.Config
+import ru.altmanea.webapp.repo.teachersRepo
+
+fun Route.teachersRoute() {
+    route(Config.teachersPath){
+        repoRoutes(teachersRepo)
+    }
+}
