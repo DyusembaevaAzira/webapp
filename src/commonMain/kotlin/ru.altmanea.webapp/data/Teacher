@@ -1,0 +1,15 @@
+package ru.altmanea.webapp.data
+
+import kotlinx.serialization.Serializable
+import ru.altmanea.webapp.common.ItemId
+
+typealias TeacherId = ItemId
+
+@Serializable
+class Teacher(
+    val firstName: String,
+    val secondName: String
+){
+    fun shortName() =
+        "$secondName ${firstName[0]}."
+}
